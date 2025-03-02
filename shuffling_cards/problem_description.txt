@@ -1,0 +1,15 @@
+Problem name: shuffling cards
+Order: BFS complexity
+Constraints: 1 <= N <= 1e5
+
+Input format:
+N S D
+
+Output format:
+M
+
+Sample input:
+4 3 8
+
+Sample output:
+3
