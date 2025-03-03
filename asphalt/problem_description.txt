@@ -1,0 +1,29 @@
+Problem name: asphalt
+Order: BFS complexity
+Constraints: 1 <= N <= 1e5, 1 <= M <= min((n - 1) * n / 2, 1e6)
+* Note: It's guaranteed that the graph is connected!
+
+Input format:
+N M
+a_i_0 a_j_0
+a_i_1 a_j_1
+.
+.
+.
+a_i_n a_j_n
+
+Output format:
+N
+
+Sample input:
+5 7
+1 2
+1 3
+1 4
+2 5
+3 6
+6 5
+4 5
+
+Sample output:
+4
