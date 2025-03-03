@@ -1,0 +1,26 @@
+Problem name: fractional knapsack
+Order: sort complexity
+
+Constraints: 
+    1 <= N <= 1e5
+    1 <= W <= 1e3
+    1 <= Pi <= 1e3 
+    1 <= Wi <= 1e2 
+
+Input format:
+N W
+Pi Wi
+Pi+1 Wi+1
+
+Output format:
+M
+
+Sample input:
+3
+50
+60 10 
+100 20 
+120 30 
+
+Sample output:
+240

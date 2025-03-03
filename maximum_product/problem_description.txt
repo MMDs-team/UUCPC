@@ -1,0 +1,26 @@
+Problem name: maximum product
+Order: sort complexity
+
+Constraints: 
+    1 <= T <= 2e2
+    5 <= N <= 1e4
+    -1e3 <= ai <= 1e3
+
+Input format:
+T
+N 
+a1 a2 a3 ... an
+
+Output format:
+M1
+M2
+...
+Mt
+
+Sample input:
+1
+6
+-1 0 0 0 -1 -1
+
+Sample output:
+0

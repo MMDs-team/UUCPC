@@ -1,0 +1,24 @@
+Problem name: reading book
+Order: sort complexity
+
+Constraints: 
+    1 <= N <= 2e5
+    1 <= Ki <= N - 1 
+    1 <= Ai <= 1e2 
+
+Input format:
+N
+Ki Aj Aj+1
+
+Output format:
+M
+
+Sample input:
+4
+1 2
+0
+2 1 4
+1 2
+
+Sample output:
+2
