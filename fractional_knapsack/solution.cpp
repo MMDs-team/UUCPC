@@ -6,7 +6,7 @@ using namespace std ;
 #define p first
 #define w second
 
-void slove(){
+void solve(){
     int len, w;
     double value{};
     cin >> len >> w;
@@ -34,5 +34,5 @@ void slove(){
 
 int main(){
     IO
-    slove() ;
+    solve() ;
 }
