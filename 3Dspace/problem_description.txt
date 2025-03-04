@@ -1,0 +1,38 @@
+Problem name: alex and a rhombus 
+Order: lineaer
+
+Constraints: 
+    1 <= N <= 2e5 
+    1 <= C <= 1e18
+    s[i] <= 1e4
+
+
+Input format:
+A
+
+
+Output format:
+W
+
+Sample input:
+4
+....
+....
+....
+.X..
+....
+...X
+.X..
+XXX.
+...X
+..XX
+.X.X
+.X..
+....
+.X.X
+XXX.
+.X..
+
+
+Sample output:
+8
