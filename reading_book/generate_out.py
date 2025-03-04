@@ -9,7 +9,7 @@ def compile_and_run(src_code):
 
     _, ext = os.path.splitext(src_code)
     if ext == ".cpp":
-        compile_command = ["g++", "-std=c++20", src_code, "-o", "solver"]
+        compile_command = ["g++", src_code, "-o", "solver"]
         run_command = "./solver"
     elif ext == ".c":
         compile_command = ["gcc", src_code, "-o", "solver"]

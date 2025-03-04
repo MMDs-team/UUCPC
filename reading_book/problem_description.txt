@@ -2,9 +2,8 @@ Problem name: reading book
 Order: sort complexity
 
 Constraints: 
-    1 <= N <= 2e5
+    1 <= N <= 2e4
     1 <= Ki <= N - 1 
-    1 <= Ai <= 1e2 
 
 Input format:
 N

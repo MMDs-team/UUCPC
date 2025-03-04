@@ -3,7 +3,7 @@
 typedef long long ll ;
 using namespace std ;
 
-void slove(){
+void solve(){
     int num , plus = 0 ; cin >> num ;
     int arr[num + 1] ; arr[0] = 1 ; 
     for(int i = 1 ; i <= num ; i++){
@@ -15,5 +15,5 @@ void slove(){
 
 int main(){
     IO
-    slove() ;
+    solve() ;
 }
