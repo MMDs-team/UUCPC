@@ -28,7 +28,7 @@ for i in range(first_tc_file, last_tc_file + 1):
         file.write(f"{a}\n")
         cube = [[[0 for _ in range(a)] for _ in range(a)] for _ in range(a)]
 
-        cnt = randint(20, max(23, a*a))
+        cnt = randint(20, max(23, a*a//2))
         for _ in range(cnt):
             x = randint(0, a)
             y = randint(0, a)

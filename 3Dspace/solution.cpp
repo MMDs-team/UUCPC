@@ -26,24 +26,24 @@ int flood_fill(int x, int y, int z) {
 
 void solve() {
     cin >> N;
-
-    string s;
+    char c;
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            cin >> s;
             for (int k = 0; k < N; k++) {
-                cube[i][j][k] = (s[i] == '.') ? false : true;
+                cin >> c;
+                cube[i][j][k] = (c == '.') ? false : true;
                 vis[i][j][k] = false;
             }
         }
     }
-    
+
     int ans = 0;
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             for (int k = 0; k < N; k++) {
-                ans = max(ans, flood_fill(i, j, k));
+                if (!vis[i][j][k] && cube[i][j][k]) 
+                    ans = max(ans, flood_fill(i, j, k));
             }
         }
     }
