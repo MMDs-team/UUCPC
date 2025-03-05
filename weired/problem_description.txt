@@ -1,0 +1,18 @@
+Problem name: alex and a rhombus 
+Order: lineaer
+
+Constraints: 
+    1 <= N <= 2e6
+
+
+Input format:
+N
+
+Output format:
+A
+
+Sample input:
+3
+
+Sample output:
+3 10 5 16 8 4 2 1
