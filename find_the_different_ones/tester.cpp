@@ -15,54 +15,67 @@ int main(int argc, char const *argv[])
     ifstream test_out(argv[2]); /* This stream reads from test's output file  */
     ifstream user_out(argv[3]); /* This stream reads from user's output file  */
 
-    int n;
-    test_in >> n;
-    ll a[n];
-    for (int i = 0; i < n; i++)
-        test_in >> a[i];
-
-    int q, left, right, user_left, user_right;
-    test_in >> q;
-
+    int tc;
+    test_in >> tc;
     bool accepted = true;
 
-    while (q--)
-    {
-        test_in >> left >> right;
-        user_out >> user_left >> user_left;
-        test_out >> left >> right;
-
-        if (left == -1 && right == -1)
+    while (tc--) {
+        int n;
+        test_in >> n;
+        ll a[n];
+        for (int i = 0; i < n; i++)
+        test_in >> a[i];
+        
+        int q, left, right, user_left, user_right, left_out, right_out;
+        test_in >> q;
+    
+        while (q--)
         {
-            if (user_left != -1 || user_right != -1)
+            test_in >> left >> right;
+            user_out >> user_left >> user_right;
+            test_out >> left_out >> right_out;
+
+            if (!accepted) continue;
+
+            if (user_left != left_out || user_right != right_out) {
+                cout << "Here:" << q + 1 << ' ' << left_out << ' ' << right_out << '\n';
+            }
+            
+            if (left_out == -1 && right_out == -1)
+            {
+                if (user_left != -1 || user_right != -1)
                 accepted = false;
-            break;
-        }
+                continue;
+            }
+            
+            
+            if (user_left == -1 || user_right == -1)
+            {
+                accepted = false;
+                continue;
+            }
+            
+            
+            if (user_left < left || user_right > right)
+            {
+                accepted = false;
+                continue;
+            }
 
-        if (user_left == -1 || user_right == -1)
-        {
-            accepted = false;
-            break;
-        }
 
-        if (user_left < left || user_right > right)
-        {
-            accepted = false;
-            break;
+            if (a[user_left - 1] == a[user_right - 1])
+            {
+                accepted = false;
+                continue;
+            }
         }
-
-        if (a[user_left] == a[user_right])
-        {
-            accepted = false;
-            break;
-        }
-
-        if (!accepted)
-            break;
     }
+    
 
-    if (accepted)
+
+    if (accepted){
         return 0;
-    else
+    }else{
         return 1;
+    }
 }
