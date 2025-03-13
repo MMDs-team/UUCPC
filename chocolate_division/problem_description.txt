@@ -1,0 +1,17 @@
+Problem name: farm_division
+Order:
+    -Time complexity: O(log(max(N, M)))
+    -Space complexity: O(log(max(N, M))
+Constraints: 1 <= N <= 1e12, 1 <= M <= 1e12
+
+Input format:
+N M
+
+Output format:
+C
+
+Sample input:
+10 20
+
+Sample output:
+2
