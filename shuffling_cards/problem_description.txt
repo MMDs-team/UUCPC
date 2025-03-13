@@ -1,6 +1,6 @@
 Problem name: shuffling cards
 Order: BFS complexity
-Constraints: 1 <= N <= 1e5
+Constraints: 1 <= N <= 1e5, 1 <= S <= D <= 2 * N
 
 Input format:
 N S D
