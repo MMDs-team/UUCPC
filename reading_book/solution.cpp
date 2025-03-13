@@ -3,8 +3,8 @@
 #define ONLINE_JUDGE
 #define _MOD (1000000007)
 #define MOD(n) (((n % _MOD) + _MOD) % _MOD)
-#define int long long
 #define endl '\n'
+#define int long long
 using namespace std;
 
 const int N = 2e5;
@@ -14,12 +14,16 @@ bool cycle{false};
 int mem[N]{};
 bitset<N> stk{};
 
-void dfs(int curr){
+void dfs(int curr)
+{
     stk.set(curr);
     mem[curr] = 0;
-    for(const auto& [w, v]: gr[curr]){
-        if(mem[v] == -1) dfs(v);
-        else if(stk[v]){
+    for (const auto &[w, v] : gr[curr])
+    {
+        if (mem[v] == -1)
+            dfs(v);
+        else if (stk[v])
+        {
             cycle = true;
             break;
         }
@@ -30,31 +34,35 @@ void dfs(int curr){
     stk.reset(curr);
 }
 
-void solve(){
+void solve()
+{
     int len, m, ch;
     cin >> len;
 
     cycle = false;
     stk.reset();
-    for (int i{}; i < len; ++i){
-        gr[i].clear(); 
+    for (int i{}; i < len; ++i)
+    {
+        gr[i].clear();
         mem[i] = -1;
     }
 
-    for (int i{}; i < len; ++i){
+    for (int i{}; i < len; ++i)
+    {
         cin >> m;
 
-        for (int j{}; j < m; ++j){
+        for (int j{}; j < m; ++j)
+        {
             cin >> ch;
             gr[--ch].emplace_back(ch > i, i);
         }
     }
 
-    for (int i{}; i < len; ++i) 
-        if(mem[i] == -1) dfs(i);
+    for (int i{}; i < len; ++i)
+        if (mem[i] == -1)
+            dfs(i);
 
-    cout << (cycle? -1: *max_element(mem, mem + len) + 1) << '\n';
-
+    cout << (cycle ? -1 : *max_element(mem, mem + len) + 1) << '\n';
 }
 
 int32_t main()

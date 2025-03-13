@@ -1,5 +1,5 @@
 Problem name: alex and a rhombus 
-Order: lineaer
+Order: linear
 
 Constraints: 
     1 <= N <= 1e3

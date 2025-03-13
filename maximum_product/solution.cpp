@@ -1,36 +1,39 @@
-#include<bits/stdc++.h>
-#define IO ios_base::sync_with_stdio(0) ; cin.tie(0) ; cout.tie(0) ;
+#include <bits/stdc++.h>
+#define MAJOONI ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #define ONLINE_JUDGE
 #define _MOD (1000000007)
 #define MOD(n) (((n % _MOD) + _MOD) % _MOD)
+#define int long long
 #define endl '\n'
-typedef long long ll ;
-using namespace std ;
+using namespace std;
 
-vector<ll> mem ;
-ll len ; 
+vector<int> mem;
+int len;
 
-ll best(int i , int j , int r , ll mul){
-    if(!r) return mul ; 
-    return max(best(i + 1 , j , r - 1 , mem[i] * mul) , best(i , j - 1 , r - 1 , mem[j] * mul)) ; 
+int best(int i, int j, int r, int mul)
+{
+    if (!r)
+        return mul;
+    return max(best(i + 1, j, r - 1, mem[i] * mul), best(i, j - 1, r - 1, mem[j] * mul));
 }
 
-void solve(){
-    ll remain = 5 , count = 0 ;
-    cin >> len ; 
-    mem.clear() ; 
-    mem.resize(len) ; 
-    for(int i = 0 ; i < len ; i++) cin >> mem[i] ; 
-    sort(mem.begin() , mem.end()) ; 
-    cout << best(0 , len - 1 , 5 , 1) << endl ;
+void solve()
+{
+    int remain = 5, count = 0;
+    cin >> len;
+    mem.clear();
+    mem.resize(len);
+    for (int i = 0; i < len; i++)
+        cin >> mem[i];
+    sort(mem.begin(), mem.end());
+    cout << best(0, len - 1, 5, 1) << endl;
 }
 
-int main(){
-    IO
-    #ifndef ONLINE_JUDGE
-    freopen("../input.txt" , "r" , stdin) ;
-    freopen("../output.txt" , "w" , stdout) ;
-    #endif
-    int tc ; cin >> tc ; while(tc--)
-    solve() ;
+int32_t main()
+{
+    MAJOONI
+    int tc;
+    cin >> tc;
+    while (tc--)
+        solve();
 }
