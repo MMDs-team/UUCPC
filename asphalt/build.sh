@@ -12,3 +12,5 @@ echo "----------------------------------------"
 echo "Generating output files..."
 python3 generate_out.py solution.cpp
 echo "Generating output files -> Done!"
+
+rm -f solver
