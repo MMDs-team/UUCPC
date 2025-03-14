@@ -2,7 +2,7 @@ Problem name: alex and a rhombus
 Order: linear
 
 Constraints: 
-    1 <= N <= 1e3
+    1 <= N <= 2e6
 
 Input format:
 N 

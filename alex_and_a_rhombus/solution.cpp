@@ -9,16 +9,14 @@ using namespace std;
 
 void solve()
 {
-    int num, plus = 0;
+    int num, plus = 0, sums = 1;
     cin >> num;
-    int arr[num + 1];
-    arr[0] = 1;
     for (int i = 1; i <= num; i++)
     {
-        arr[i] = arr[i - 1] + plus;
+        sums += plus;
         plus += 4;
     }
-    cout << arr[num];
+    cout << sums;
 }
 
 int32_t main()
